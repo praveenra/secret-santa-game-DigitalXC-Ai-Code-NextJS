@@ -68,3 +68,8 @@ Testing: Jest
 
 Styling: Tailwind CSS
 
+
+**Application Version**
+
+Version Start: 1.0.0
+
