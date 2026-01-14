@@ -49,11 +49,14 @@ We use Jest to ensure the integrity of the Secret Santa algorithm.Bash
 
 npm test
 
-The test suite validates:
+**The test suite validates:**
 
 [x] Zero self-assignments.
+
 [x] 100% unique pairings across the list.
+
 [x] Successful avoidance of previous year's matches.
+
 
 **📖 Tech Stack**
 
