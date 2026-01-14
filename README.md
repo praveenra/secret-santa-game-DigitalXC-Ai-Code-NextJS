@@ -61,6 +61,10 @@ npm test
 **📖 Tech Stack**
 
 Framework: Next.js 14+
+
 Language: TypeScript
+
 Testing: Jest
+
 Styling: Tailwind CSS
+
