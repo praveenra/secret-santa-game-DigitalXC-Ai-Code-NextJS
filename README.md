@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🎅 **Secret Santa Automator**
 
-## Getting Started
+An intelligent Secret Santa assignment system built with Next.js and TypeScript. This tool automates the "Secret Child" pairing process while strictly adhering to organizational constraints and historical data.
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**🚀 Overview**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This application helps HR or Team Leads manage holiday gift exchanges by automating the pairing process. It uses a modular, OOP-based architecture to handle complex assignment logic.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**⚖️ Assignment Rules**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Self-Exclusion: No employee is ever assigned to themselves.
+Historical Variety: No employee is assigned the same Secret Child as the previous year.
+Unique Pairs: Every employee receives exactly one unique Secret Child.
 
-## Learn More
+**🛠 Features**
 
-To learn more about Next.js, take a look at the following resources:
+CSV Integration: Bulk upload employee lists and historical assignment data.
+Validation Engine: Real-time CSV validation to prevent data errors.
+One-Click Export: Download the new assignments as a formatted CSV.
+Robust Architecture: Built with Next.js (App Router), TypeScript, and OOP principles.
+Tested Logic: Comprehensive unit tests for the pairing algorithm.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**📂 CSV Data Formats**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To ensure the logic works correctly, please use the following headers:
+1. Current Employees (employees.csv)Employee_NameEmployee_EmailIDJohn Doejohn@example.comJane Smithjane@example.com
+2. Previous Year Assignments (past_assignments.csv) - OptionalEmployee_NameEmployee_EmailIDSecret_Child_NameSecret_Child_EmailIDJohn Doejohn@example.comJane Smithjane@example.com
+  
+**📦 Getting Started**
+1. Install Dependencies
+  Bash
+  
+  npm install
+  # or
+  yarn install
+  # or
+  pnpm install
 
-## Deploy on Vercel
+2. Run the Development ServerBashnpm 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open http://localhost:3000 with your browser to see the result.
+
+**🧪 Running Tests**
+
+We use Jest to ensure the integrity of the Secret Santa algorithm.Bash
+
+npm test
+
+The test suite validates:
+
+[x] Zero self-assignments.
+[x] 100% unique pairings across the list.
+[x] Successful avoidance of previous year's matches.
+
+**📖 Tech Stack**
+
+Framework: Next.js 14+
+Language: TypeScript
+Testing: Jest
+Styling: Tailwind CSS
