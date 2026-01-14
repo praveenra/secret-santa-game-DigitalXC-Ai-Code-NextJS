@@ -60,7 +60,7 @@ npm test
 
 **📖 Tech Stack**
 
-Framework: Next.js 14+
+Framework: Next.js 14+ (Node.js 18+, React.js 18+)
 
 Language: TypeScript
 
